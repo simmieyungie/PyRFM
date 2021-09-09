@@ -1,19 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 23 15:15:09 2021
-
-@author: SIMIYOUNG
-"""
-
-#import sys
-#sys.path.append(r'C:/Users/SIMIYOUNG/Documents/Python-Projects/RFM/PyRFM/RFM')
-
-#import RFM.recency
-
-import pandas as pd
-
-import recency, frequency, monetary
-
 def rfm(data, id, date, present_date, spend, bins = {5 : [5,4,3,2,1]}):
     '''
     This function will calculate the recency.

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Aug 21 19:45:21 2021
-
-@author: SIMIYOUNG
-"""
-import pandas as pd
 def frequency(data, id, bins = {5 : [1,2,3,4,5]}):
     '''
     This function will calculate the recency.
