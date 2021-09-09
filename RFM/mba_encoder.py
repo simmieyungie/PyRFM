@@ -1,4 +1,4 @@
-def mba_encoder(data, id_col, product_col):
+def mba_encoder(data, id_col, product_col, quantity_col):
     '''
     This function will preprocess and return a one-hot encode matrix of ID's and products.
     data: Dataframe
@@ -7,11 +7,15 @@ def mba_encoder(data, id_col, product_col):
     
     id_col:   String
         
-        column name containing ID
+        Column name containing ID
     
     product_col: String
         
         Column name containing product col
+        
+    quantity_col: String
+    
+        Column name containing quantity of product purchase
     '''
     #error handlers
     #error instance to check if input is either a pandas dataframe and is also not none
@@ -26,6 +30,10 @@ def mba_encoder(data, id_col, product_col):
     if product_col not in data.columns:
         raise ValueError("id: Expected a valid product column name in Dataframe 'data'")
     
+    #Encoding
+    basket = data \
+    .unstack() \
+    .reset_index()
+    .set_index(id_col)
     
-    
-    
+    return basket
