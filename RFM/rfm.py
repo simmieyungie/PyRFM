@@ -1,3 +1,8 @@
+
+##pandas module
+import pandas as pd
+
+
 def rfm(data, id, date, present_date, spend, bins = {5 : [5,4,3,2,1]}):
     '''
     This function will calculate the recency.

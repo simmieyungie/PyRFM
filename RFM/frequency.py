@@ -1,3 +1,8 @@
+
+#pandas module
+import pandas as pd
+
+#define function
 def frequency(data, id, bins = {5 : [1,2,3,4,5]}):
     '''
     This function will calculate the recency.

@@ -1,3 +1,6 @@
+import pandas as pd
+
+#define the function
 def recency(data, id, date, present_date, bins = {5 : [5,4,3,2,1]}):
     '''
     This function will calculate the recency.
@@ -31,7 +34,7 @@ def recency(data, id, date, present_date, bins = {5 : [5,4,3,2,1]}):
         raise ValueError("id: Expected an id (a column) in Dataframe")
     
     #examine the datatype of the date column
-    if data.dtypes[date].name != "datetime64[ns]":
+    if data.dtypes[date].name not in ["datetime64[ns]", "datetime.datetime"]:
         raise ValueError("date: Expected a date datatype, 'convert the date/datetime type'")
         #print("This Column is not a of date/datetime data type")
     
